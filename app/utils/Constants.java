@@ -1,0 +1,57 @@
+package utils;
+public class Constants {
+
+	public static final String URL_HOST = "http://localhost";
+	public static final String URL_SERVER = "http://localhost";
+	//public static final String URL_SERVER = "http://einstein.sv.cmu.edu";
+	
+	// port
+	public static final String JPL_BACKEND_PORT = ":9002";
+	public static final String LOCAL_HOST_PORT = ":9000";
+	public static final String CMU_BACKEND_PORT = ":9088"; 
+	public static final String NEW_BACKEND = "http://localhost:9020/";
+	
+	// API Call format
+	public static final String FORMAT = "json";
+	
+	
+
+	//ServiceConfigItem
+	public static final String CONFIG_ITEM =	"serviceConfigurationItem/";
+	public static final String GET_CONFIG_ITEMS_BY_CONFIG= "serviceConfigurationItemByServiceConfig/";
+	
+	//service log
+	public static final String NEW_GET_A_SERVICE_LOG = "getServiceExecutionLogs/";
+	public static final String SERVICE_EXECUTION_LOG =	"serviceExecutionLog/";
+	public static final String SERVICE_EXECUTION_LOG_QUERY =	"queryServiceExecutionLogs";
+	public static final String SERVICE_EXECUTION_LOG_GET= "getServiceExecutionLog/";
+	public static final String NEW_GET_ALL_SERVICE_LOG = "getAllServiceExecutionLog";
+	
+	
+	// climate service
+	public static final String ADD_CLIMATE_SERVICE = "/climateService/addClimateService";
+	public static final String GET_ALL_CLIMATE_SERVICES = "/climateService/getAllClimateServices/json";
+	public static final String GET_MOST_RECENTLY_ADDED_CLIMATE_SERVICES_CALL = "/climateService/getAllMostRecentClimateServicesByCreateTime/json";
+	public static final String GET_MOST_POPULAR_CLIMATE_SERVICES_CALL = "/climateService/getAllMostUsedClimateServices/json";
+	
+	public static final String GET_MOST_RECENTLY_USED_CLIMATE_SERVICES_CALL = "/climateService/getAllMostRecentClimateServicesByLatestAccessTime/json";
+	public static final String GET_CLIMATE_SERVICES_CALL = "/climateService/getAllClimateServices/json";
+	
+	// climate service page
+	public static final String SAVE_CLIMATE_SERVICE_PAGE = "/climateService/savePage";
+	
+	
+	// http://www.freeformatter.com/java-dotnet-escape.html
+	// html head
+	// public static final String htmlHead = "<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\r\n    <title>Climate Service</title>\r\n    \r\n    <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-2.1.4.min.js\"></script>\r\n    <script type=\"text/javascript\" src=\"/assets/javascripts/parameter.js\"></script>\r\n\r\n    <!-- Bootstrap -->\r\n    <link href=\"/assets/stylesheets/bootstrap.min.css\" rel=\"stylesheet\">\r\n\r\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\r\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\r\n    <!--[if lt IE 9]>\r\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\r\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\r\n    <![endif]-->\r\n</head>\r\n<body>\r\n\r\n<h2 class=\"text-center\">Service: 2-D Variable Map</h2>\r\n\r\n<p class=\"text-center col-md-8 col-md-offset-2\">This service generates a map of a 2-dimensional variable with time\r\n    averaging and spatial\r\n    subsetting. Select a data source (model or observation), a variable name, a time range, and a spatial range\r\n    (lat-lon box) below.\r\n</p>\r\n\r\n<div class=\"container col-md-6\">\r\n    <form>\r\n        <table class=\"table table-bordered table-striped\">\r\n            <thead>\r\n            <tr>\r\n                <th class=\"col-md-2\">Parameter Name</th>\r\n                <th class=\"col-md-4\">Value</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody id=\"dynamicTBody\">";
+	
+	public static final String htmlHead1 = "<head>\r\n    <meta charset=\"utf-8\">\r\n    <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\r\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\r\n    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->\r\n    <title>Climate Service</title>\r\n    \r\n    <script type=\"text/javascript\" src=\"http://code.jquery.com/jquery-2.1.4.min.js\"></script>\r\n    <script type=\"text/javascript\" src=\"/assets/javascripts/parameter.js\"></script>\r\n\r\n    <!-- Bootstrap -->\r\n    <link href=\"/assets/stylesheets/bootstrap.min.css\" rel=\"stylesheet\">\r\n\r\n    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->\r\n    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->\r\n    <!--[if lt IE 9]>\r\n    <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>\r\n    <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>\r\n    <![endif]-->\r\n</head>\r\n<body>\r\n\r\n<h2 class=\"text-center\">";
+	public static final String htmlHead2 = "</h2>\r\n\r\n<p class=\"text-center col-md-8 col-md-offset-2\">";
+	public static final String htmlHead3 = "</p>\r\n\r\n<div class=\"container col-md-6\">\r\n    <form>\r\n        <table class=\"table table-bordered table-striped\">\r\n            <thead>\r\n            <tr>\r\n                <th class=\"col-md-2\">Parameter Name</th>\r\n                <th class=\"col-md-4\">Value</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody id=\"dynamicTBody\">";
+	
+	// html tail
+	//public static final String htmlTail = "</tbody>\r\n        </table>\r\n    </form>\r\n    <div class=\"text-center\">\r\n    \t<button type=\"submit\" class=\"btn btn-success btn-lg\" onclick=\"Javascript:sendValues()\">Get Plot</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"container col-md-6\">\r\n    <form>\r\n        <table class=\"table table-bordered table-striped\">\r\n            <thead>\r\n            <tr>\r\n                <th>Output</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody>\r\n            <tr>\r\n                <td>\r\n                    <a id=\"serviceImgLink\" href=\"\">\r\n                        <img src=\"\" id=\"serviceImg\" class=\"img-responsive\">\r\n                    </a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>\r\n                    <a id=\"commentLink\" href=\"\">\r\n                        <textarea class=\"form-control\" rows=\"3\" id=\"comment\"></textarea>\r\n                    </a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>\r\n                    <textarea class=\"form-control\" rows=\"10\" id=\"message\"></textarea>\r\n                </td>\r\n            </tr>\r\n            </tbody>\r\n        </table>\r\n        <div class=\"text-center\">\r\n            <button type=\"submit\" class=\"btn btn-success btn-lg\">Download Data</button>\r\n        </div>\r\n    </form>\r\n</div>\r\n\r\n<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\r\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\r\n<!-- Include all compiled plugins (below), or include individual files as needed -->\r\n<script src=\"/assets/javascripts/bootstrap.min.js\"></script>\r\n</body>\r\n</html>";
+	public static final String htmlTail1 = "</tbody>\r\n        </table>\r\n    </form>\r\n    <div class=\"text-center\">\r\n    \t<button type=\"submit\" class=\"btn btn-success btn-lg\" onclick=\"Javascript:sendValues('";
+	public static final String htmlTail2 = "')\">Get Plot</button>\r\n    </div>\r\n</div>\r\n\r\n<div class=\"container col-md-6\">\r\n    <form>\r\n        <table class=\"table table-bordered table-striped\">\r\n            <thead>\r\n            <tr>\r\n                <th>Output</th>\r\n            </tr>\r\n            </thead>\r\n            <tbody>\r\n            <tr>\r\n                <td>\r\n                    <a id=\"serviceImgLink\" href=\"\">\r\n                        <img src=\"\" id=\"serviceImg\" class=\"img-responsive\">\r\n                    </a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>\r\n                    <a id=\"commentLink\" href=\"\">\r\n                        <textarea class=\"form-control\" rows=\"3\" id=\"comment\"></textarea>\r\n                    </a>\r\n                </td>\r\n            </tr>\r\n            <tr>\r\n                <td>\r\n                    <textarea class=\"form-control\" rows=\"10\" id=\"message\"></textarea>\r\n                </td>\r\n            </tr>\r\n            </tbody>\r\n        </table>\r\n        <div class=\"text-center\">\r\n            <button type=\"submit\" class=\"btn btn-success btn-lg\">Download Data</button>\r\n        </div>\r\n    </form>\r\n</div>\r\n\r\n<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->\r\n<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js\"></script>\r\n<!-- Include all compiled plugins (below), or include individual files as needed -->\r\n<script src=\"/assets/javascripts/bootstrap.min.js\"></script>\r\n</body>\r\n</html>";
+	
+}
